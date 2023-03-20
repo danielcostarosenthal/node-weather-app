@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+:root {
+	--border-radius: 2px;
+}
+
 body {
 	color: #333;
 	font-family: Arial, sans-serif;
@@ -50,18 +54,77 @@ main img.portrait {
 	width: 250px;
 }
 
-main input {
+main p.msg {
+	margin-bottom: 20px;
+	display: none;
+}
+
+/*! FORM */
+form input,
+form button {
+	border-radius: var(--border-radius);
+}
+
+form input {
 	margin: 20px 0;
 	border: 1px solid #ccc;
 	padding: 10px;
+	width: calc(100% - 105px);
 }
 
-main button {
+form button {
 	cursor: pointer;
 	padding: 10px;
 	border: 1px solid #888;
 	background-color: #888;
 	color: #fff;
+	width: 100px;
+}
+
+/*! WEATHER CARD */
+.weather-msg,
+.weather-card {
+	display: none;
+}
+
+.weather-msg {
+	margin-bottom: 10px;
+}
+.weather-card,
+.weather-icon {
+	border-radius: var(--border-radius);
+}
+
+.weather-card {
+	background-color: #c5def3;
+	padding: 10px;
+}
+
+.weather-card > .weather-elements {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.weather-temp {
+	font-size: 24px;
+}
+
+.weather-temp,
+.weather-forecast {
+	font-weight: bold;
+}
+
+.weather-location {
+	line-height: 1.5;
+}
+
+.weather-forecast {
+	margin: 20px 0 10px 0;
+}
+
+.weather-city {
+	font-style: italic;
 }
 
 /*! FOOTER */

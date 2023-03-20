@@ -1,19 +1,28 @@
-console.log('Client side JS file is loaded')
-
-const weatherForm = document.getElementById('weatherForm')
-const weatherInput = document.getElementById('weatherInput')
-const msgOne = document.getElementById('msg-1')
-const msgTwo = document.getElementById('msg-2')
+const weatherForm = document.getElementById('weather-form')
+const weatherInput = document.getElementById('weather-input')
+const weatherMsg = document.getElementById('weather-msg')
+const weatherCard = document.getElementById('weather-card')
+const weatherIcon = document.getElementById('weather-icon')
+const weatherTemp = document.getElementById('weather-temp')
+const weatherForecast = document.getElementById('weather-forecast')
+const weatherCity = document.getElementById('weather-city')
 
 const getForecastData = async (url) => {
 	const response = await fetch(url)
 	const { error, forecast, location } = await response.json()
 
 	if (error) {
-		msgOne.textContent = error
+		weatherMsg.style.display = 'block'
+		weatherMsg.textContent = error
 	} else {
-		msgOne.textContent = location
-		msgTwo.textContent = forecast.description
+		weatherMsg.style.display = 'none'
+		weatherCard.style.display = 'block'
+		weatherIcon.src = forecast.weatherIcon
+		weatherTemp.textContent = `${forecast.temperature}ºC`
+		weatherForecast.textContent = forecast.description
+		weatherCity.textContent = location
+		weatherInput.value = location.split(',')[0]
+		weatherInput.blur()
 		console.log(forecast)
 	}
 }
@@ -21,8 +30,8 @@ const getForecastData = async (url) => {
 weatherForm.addEventListener('submit', (e) => {
 	e.preventDefault()
 
-	msgOne.textContent = 'Loading...'
-	msgTwo.textContent = ''
+	weatherMsg.style.display = 'block'
+	weatherMsg.textContent = 'Loading...'
 
 	const location = weatherInput.value
 	getForecastData(`http://localhost:3000/weather?address=${location}`)

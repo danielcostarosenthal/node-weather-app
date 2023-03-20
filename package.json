@@ -2,9 +2,9 @@
 	"name": "web-server",
 	"version": "1.0.0",
 	"description": "",
-	"main": "app.js",
 	"scripts": {
-		"dev": "nodemon src/app.js -e js,mjs,hbs"
+		"start": "node src/app.js",
+		"dev": "nodemon src/app.js"
 	},
 	"author": "Daniel Costa",
 	"license": "MIT",

@@ -12,12 +12,21 @@
 		{{> header}}
 		<main>
 			<p>Use this site to get your weather!</p>
-			<form id="weatherForm">
-				<input id="weatherInput" type="text" placeholder="Location">
+			<form id="weather-form">
+				<input id="weather-input" type="text" placeholder="Location">
 				<button>Search</button>
 			</form>
-			<p id="msg-1"></p>
-			<p id="msg-2"></p>
+			<p id="weather-msg" class="weather-msg"></p>
+			<div id="weather-card" class="weather-card">
+				<div class="weather-elements">
+					<img id="weather-icon" class="weather-icon" alt="Weather Icon">
+					<p id="weather-temp" class="weather-temp"></p>
+				</div>
+				<div class="weather-location">
+					<p id="weather-forecast" class="weather-forecast"></p>
+					<p id="weather-city" class="weather-city"></p>
+				</div>
+			</div>
 		</main>
 		{{> footer}}
 	</body>

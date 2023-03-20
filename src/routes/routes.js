@@ -4,7 +4,8 @@ const router = express.Router()
 router.get('/', (req, res) => {
 	res.render('index', {
 		title: 'Weather',
-		name: process.env.MY_NAME
+		name: process.env.MY_NAME,
+		weatherIcon: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png'
 	})
 })
 
