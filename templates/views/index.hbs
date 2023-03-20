@@ -5,13 +5,19 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<link rel="shortcut icon" href="/img/weather.jpg" type="image/x-icon">
 		<link rel='stylesheet' href='/css/style.css' />
-		<script src='/js/app.js' defer></script>
+		<script src='/js/main.js' defer></script>
 		<title>{{title}}</title>
 	</head>
 	<body>
 		{{> header}}
 		<main>
 			<p>Use this site to get your weather!</p>
+			<form id="weatherForm">
+				<input id="weatherInput" type="text" placeholder="Location">
+				<button>Search</button>
+			</form>
+			<p id="msg-1"></p>
+			<p id="msg-2"></p>
 		</main>
 		{{> footer}}
 	</body>

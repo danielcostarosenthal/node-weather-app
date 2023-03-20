@@ -50,6 +50,20 @@ main img.portrait {
 	width: 250px;
 }
 
+main input {
+	margin: 20px 0;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+main button {
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #888;
+	background-color: #888;
+	color: #fff;
+}
+
 /*! FOOTER */
 footer {
 	color: #888;

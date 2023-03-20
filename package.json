@@ -9,8 +9,10 @@
 	"author": "Daniel Costa",
 	"license": "MIT",
 	"dependencies": {
+		"dotenv": "^16.0.3",
 		"express": "^4.18.2",
-		"hbs": "^4.2.0"
+		"hbs": "^4.2.0",
+		"request": "^2.88.2"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.21"
