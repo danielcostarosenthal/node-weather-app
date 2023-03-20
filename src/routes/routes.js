@@ -4,21 +4,21 @@ const router = express.Router()
 router.get('/', (req, res) => {
 	res.render('index', {
 		title: 'Weather',
-		name: 'Daniel Costa'
+		name: process.env.MY_NAME
 	})
 })
 
 router.get('/about', (req, res) => {
 	res.render('about', {
 		title: 'About Me',
-		name: 'Daniel Costa'
+		name: process.env.MY_NAME
 	})
 })
 
 router.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help',
-		name: 'Daniel Costa',
+		name: process.env.MY_NAME,
 		message: 'This is some helpful information.'
 	})
 })
@@ -38,7 +38,7 @@ router.get('/products', (req, res) => {
 router.get('/help/*', (req, res) => {
 	res.render('404', {
 		title: '404 Error',
-		name: 'Daniel Costa',
+		name: process.env.MY_NAME,
 		message: 'Help article not found.'
 	})
 })
@@ -46,7 +46,7 @@ router.get('/help/*', (req, res) => {
 router.get('*', (req, res) => {
 	res.render('404', {
 		title: '404 Error',
-		name: 'Daniel Costa',
+		name: process.env.MY_NAME,
 		message: 'Page not found.'
 	})
 })
