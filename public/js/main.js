@@ -19,7 +19,7 @@ const getForecastData = async (url) => {
 		weatherCard.style.display = 'block'
 		weatherIcon.src = forecast.weatherIcon
 		weatherTemp.textContent = `${forecast.temperature}ºC`
-		weatherForecast.textContent = forecast.description
+		weatherForecast.textContent = forecast.forecast
 		weatherCity.textContent = location
 		weatherInput.value = location.split(',')[0]
 		weatherInput.blur()
