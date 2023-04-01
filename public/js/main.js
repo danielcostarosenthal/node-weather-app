@@ -34,5 +34,6 @@ weatherForm.addEventListener('submit', (e) => {
 	weatherMsg.textContent = 'Loading...'
 
 	const location = weatherInput.value
+	// getForecastData(`http://localhost:3000/weather?address=${location}`)
 	getForecastData(`https://nice-plum-panther-tam.cyclic.app/weather?address=${location}`)
 })
